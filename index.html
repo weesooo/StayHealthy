@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel='manifest' href='./manifest.json'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>IT 202- Big Project: PartyASAP app</title>
+  
+    <!-- stylesheet from bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+  <style>
+    .header {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      text-align:center;
+      } 
+    .btn btn-outline-success my-2 my-sm-0{
+      width: 100%;
+      text-align:center;
+      }
+
+    .template {display: none;}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      #map {
+      height: 500px;
+      max-width: 100%;
+      }
+    </style>
+	
+</head>
+	
+<body>
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#home">PartyASAP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Map">Map</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- First page: Home -->
+<section class="content" id="home">
+
+    <div id="home-header">
+      <div class="header" align="center">PartyASAP. Find a concert/festival near you tonight!</div>
+      <p class="header-par"align="center"><b style="color: red;">Search by venue</b></p>
+    </div>
+
+    <form id="filters" class="form-inline my-2 my-lg-0">
+      <input id="input-search-bar" class="form-control mr-sm-2" type="text" placeholder="ex: Aragon, Concord" text-align= cetner aria-label="Search">
+    </form>
+    <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0 align="center"" type="submit">Search</button>
+
+</section>
+  
+    
+<!-- Second page: map -->
+<section class="content" id="screen3">
+       <p class="header-info"> <b style="color: purple;">Purple</b> markers show upcoming concerts at the Aragon. On the other hand, <b style="color: yellow;">Yellow</b> markers show upcoming concerts at Concord</p>
+      <div id="map"></div>
+</section>   
+    
+
+
+
+       <!-- Third Page: About Page-->
+<section class="content" id="about">
+      <div id="about-header">
+        <div class="header">About PartyASAP</div>
+        <p class="header-par"align= center><b style="color: red;">App name is PartyASAP. You can find it on GitHub</b><a href="https://github.com/weesooo/it202-project2">  WEESOOO</a>
+        <p class="header-par"align= center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
+</section>
+   
+</body>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- From bootstrap jquery, slim, and popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="js/multiplescreens.js"></script>
+<script src="js/map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwUbDXqbKUq1IYErZGai3Htxlcsi4JKY&callback=initMap"></script>
+<script>
+  // To register the service worker:
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('./sw.js')
+      .then(function() {
+        console.log("Service Worker Registered");
+      });
+  }
+</script>
+    
+    
+</html>
