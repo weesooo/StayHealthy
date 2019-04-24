@@ -8,8 +8,7 @@ let chicago = {
   lng: -87.6298
 };
 
-const APIurl = "https://data.cityofchicago.org/resource/cdmx-wzbz.json?$limit=50";
-
+const APIurl = "https://data.cityofchicago.org/resource/wwy2-k7b3.json$limit=50";
 // Initialize and add the map
 function initMap() {
   let map = new google.maps.Map(document.getElementById('map'), {
@@ -33,7 +32,7 @@ function initMap() {
         lng: parseFloat(v.longitude)
       }
 
-      if (v.status === "Open") {
+      if (v.football_soccer_combo === '0') {
         marker = new google.maps.Marker({
           map: map,
           position: location,
