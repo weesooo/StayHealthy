@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>IT 202- Big Project: PartyASAP app</title>
   
+    
+<script src="js/map.js"></script>
+
     <!-- stylesheet from bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Custom styles for this template -->
@@ -26,6 +29,14 @@
       text-align:center;
       }
 
+      
+    .AlignCenter{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+        }
+      
     .template {display: none;}
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -87,7 +98,7 @@
   
     
 <!-- Second page: map -->
-<section class="content" id="screen3">
+<section class="content" id="Map">
        <p class="header-info"> <b style="color: purple;">Purple</b> markers show upcoming concerts at the Aragon. On the other hand, <b style="color: yellow;">Yellow</b> markers show upcoming concerts at Concord</p>
       <div id="map"></div>
 </section>   
@@ -101,6 +112,11 @@
         <div class="header">About PartyASAP</div>
         <p class="header-par"align= center><b style="color: red;">App name is PartyASAP. You can find it on GitHub</b><a href="https://github.com/weesooo/PartyASAP"> WEESOOO</a>
         <p class="header-par"align= center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
+          
+          <img src="pic1.jpg" class="AlignCenter" style="width:630px;height:460px;>
+
+          
+       
 </section>
    
 </body>
@@ -124,6 +140,22 @@
         console.log("Service Worker Registered");
       });
   }
+</script>
+    
+<script>
+      $(document).ready(function() {
+
+        function hideScreens() {
+          $(".content").hide();
+        }
+
+        $(".nav-link").on("click", function(){
+          hideScreens();
+          var target = $(this).attr("href");
+          $(target).show();
+        });
+
+      });
 </script>
     
     
