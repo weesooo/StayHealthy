@@ -25,7 +25,6 @@
       width: 100%;
       text-align:center;
       }
-
       
     .AlignCenter{
       display: block;
@@ -111,39 +110,24 @@
         <p class="header-par"align= center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
           
           <img src="pic1.jpg" class="AlignCenter" style="width:630px;height:460px;>
-
           
        
 </section>
    
 </body>
-
 <script src="js/map.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwUbDXqbKUq1IYErZGai3Htxlcsi4JKY&callback=initMap"></script>
-<script>
-  // To register the service worker:
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('./sw.js')
-      .then(function() {
-        console.log("Service Worker Registered");
-      });
-  }
-</script>
-    
+ 
 <script>
       $.(document).ready(function() {
-
         function hideScreens() {
           $(".content").hide();
         }
-
         $(".nav-link").on("click", function(){
           hideScreens();
           var target = $(this).attr("href");
           $(target).show();
         });
-
       });
                                           
 </script>
