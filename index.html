@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>IT 202- Big Project: PartyASAP app</title>
+    <title>IT 202- Big Project: StayHealthy app</title>
 
     <!-- stylesheet from bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -55,7 +55,7 @@
   <body>
     <!-- navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#home">PartyASAP</a>
+      <a class="navbar-brand" href="#home">StayHealthy</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -78,12 +78,12 @@
     <section class="content" id="home">
 
       <div id="home-header">
-        <div class="header" align="center">PartyASAP. Find a concert/festival near you tonight!</div>
-        <p class="header-par" align="center"><b style="color: red;">Search by venue</b></p>
+        <div class="header" align="center">StayHealthy. Find a free clinic near you today!</div>
+        <p class="header-par" align="center"><b style="color: red;">Search by Zipcode</b></p>
       </div>
 
       <form id="filters" class="form-inline my-2 my-lg-0">
-        <input id="input-search-bar" class="form-control mr-sm-2" type="text" placeholder="ex: Aragon, Concord" text-align=cetner aria-label="Search">
+        <input id="input-search-bar" class="form-control mr-sm-2" type="text" placeholder="ex: 60626" text-align=cetner aria-label="Search">
       </form>
       <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0 align=" center"" type="submit">Search</button>
 
@@ -92,7 +92,7 @@
 
     <!-- Second page: map -->
     <section class="content" id="Map">
-      <p class="header-info"> <b style="color: purple;">Purple</b> markers show upcoming concerts at the Aragon. On the other hand, <b style="color: yellow;">Yellow</b> markers show upcoming concerts at Concord</p>
+      <p class="header-info"> <b style="color: red;">Red</b> markers show clinics that specify in STI testing. On the other hand, <b style="color: blue;">Blue</b> markers show clinics that specify in Mental Health. </p>
       <div id="map"></div>
     </section>
 
@@ -102,14 +102,15 @@
     <!-- Third Page: About Page-->
     <section class="content" id="about">
       <div id="about-header"></div>
-      <div class="header">About PartyASAP</div>
-      <p class="header-par" align=center><b style="color: red;">App name is PartyASAP. You can find it on GitHub</b><a href="https://github.com/weesooo/PartyASAP">WEESOOO</a></p>
+      <div class="header">About StayHealthy</div>
+      <p class="header-par" align=center><b style="color: red;">App name is StayHealthy. You can find it on GitHub</b><a href="https://github.com/weesooo/StayHealthy">WEESOOO</a></p>
       <p class="header-par" align=center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
       <img src="pic1.jpg" class="AlignCenter">
     </section>
 
   </body>
-
+    
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="js/map.js"> </script>
      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwUbDXqbKUq1IYErZGai3Htxlcsi4JKY&callback=initMap">
   </script>
@@ -126,7 +127,7 @@
   </script> -->
 
 <script>
-    $.(document).ready(function() {
+    $(document).ready(function() {
 
       function hideScreens() {
         $(".content").hide();
