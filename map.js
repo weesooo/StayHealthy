@@ -1,5 +1,3 @@
-// Main Javascript for map
-let map;
 // storing markers in array for use later
 let markersArray = [];
 
