@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>IT 202- Big Project: StayHealthy app</title>
+      
+    <link rel="manifest" href="./js/manifest.json">
 
     <!-- stylesheet from bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -105,7 +107,6 @@
       <div class="header">About StayHealthy</div>
       <p class="header-par" align=center><b style="color: red;">App name is StayHealthy. You can find it on GitHub</b><a href="https://github.com/weesooo/StayHealthy">WEESOOO</a></p>
       <p class="header-par" align=center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
-      <!---<img src="pic1.jpg" class="AlignCenter"><!-----
     </section>
 
   </body>
@@ -115,16 +116,6 @@
      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwUbDXqbKUq1IYErZGai3Htxlcsi4JKY&callback=initMap">
   </script>
     
-  <!-- <script>
-    // To register the service worker:
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('./sw.js')
-        .then(function() {
-          console.log("Service Worker Registered");
-        });
-    }
-  </script> -->
 
 <script>
     $(document).ready(function() {
@@ -143,4 +134,18 @@
 </script>
 <script src="js/map.js"></script>
 
+<script>
+  	if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./js/sw.js')
+  .then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+</script>
+        
+        
 </html>
