@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>IT 202- Big Project: StayHealthy app</title>
       
-    <link rel="manifest" href="./js/manifest.json">
+    <link rel="manifest" href="./manifest.json">
 
     <!-- stylesheet from bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -112,7 +112,7 @@
   </body>
     
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-  <script src="js/map.js"> </script>
+  <script src="./map.js"> </script>
      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwUbDXqbKUq1IYErZGai3Htxlcsi4JKY&callback=initMap">
   </script>
     
@@ -136,7 +136,7 @@
 
 <script>
   	if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./js/sw.js')
+  navigator.serviceWorker.register('./sw.js')
   .then(function(reg) {
     // registration worked
     console.log('Registration succeeded. Scope is ' + reg.scope);
