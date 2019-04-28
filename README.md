@@ -1,6 +1,6 @@
 IT202 - BIG PROJECT
 
-                                                    ---------PARTY ASAP-----------
+                                                    ---------StayHealthy-----------
                                                     
                                                     
-My app is used to search for festivals/concerts that are upcoming and happening in Chicago. You can search by venue.
+My app is used to search for free clinics that are in Chicago for people who have no health insurance.
