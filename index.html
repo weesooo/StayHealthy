@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>IT 202- Big Project: StayHealthy app</title>
       
+      
     <link rel="manifest" href="./manifest.json">
 
+       <link href="https://unpkg.com/material-components-web@1.0.0/dist/material-components-web.min.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      
+      
     <!-- stylesheet from bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -23,7 +28,39 @@
         text-align:center;
         }
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+        
+        
+        
+        
       .AlignCenter {
         display: block;
         margin-left: auto;
@@ -70,6 +107,9 @@
             <a class="nav-link" href="#Map">Map</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#contactus">Contact Us</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
         </ul>
@@ -101,13 +141,46 @@
 
 
 
-    <!-- Third Page: About Page-->
+      <!-- Fourth Page: About Page-->
+    <section class="content" id="contactus">
+      <div id="contactus-header"></div>
+      <div class="header">Contact Us</div>
+      <p class="header-par" align=center><b style="color: red;">Please fill out the form below to contact us with any suggestions, questions, or concerns! :</b></p>
+        
+       <h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+      
+          <!-- Third Page: About Page-->
     <section class="content" id="about">
       <div id="about-header"></div>
       <div class="header">About StayHealthy</div>
       <p class="header-par" align=center><b style="color: red;">App name is StayHealthy. You can find it on GitHub</b><a href="https://github.com/weesooo/StayHealthy">WEESOOO</a></p>
       <p class="header-par" align=center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
     </section>
+      
+  
+      
 
   </body>
     
