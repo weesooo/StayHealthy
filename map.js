@@ -59,11 +59,6 @@ function initMap() {
         infowindow.open(map, marker);
       });
         
-      let textBox = document.getElementById("input-search-bar").innerHTML;
-      console.log(textBox);
-      if (textBox.innerHTML > 0) {
-        marker.setMap(null);
-      }
 
     });
   }

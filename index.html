@@ -128,9 +128,12 @@ input[type=submit]:hover {
         <p class="header-par" align="center"><b style="color: red;">Search by Zipcode</b></p>
       </div>
 
-      <form id="filters" class="form-inline my-2 my-lg-0">
-        <input id="input-search-bar" class="form-control mr-sm-2" type="text" placeholder="ex: 60626" text-align=cetner aria-label="Search">
-      </form>
+<form id="labnol" method="get" action="https://www.google.com/search">
+  <div class="speech">
+    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+  </div>
+</form>
       <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0 align=" center"" type="submit">Search</button>
 
     </section>
@@ -188,7 +191,35 @@ input[type=submit]:hover {
        </div>
       
       
-      
+        
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('labnol').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>       
+        
 <script>
           //
           // Define your database
@@ -217,7 +248,6 @@ input[type=submit]:hover {
     
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="./map.js"> </script>
-      <div id="map"></div>
      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwUbDXqbKUq1IYErZGai3Htxlcsi4JKY&callback=initMap">
   </script>
     
