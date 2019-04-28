@@ -3,7 +3,6 @@ var appShellFiles = [
  "./index.html",
  "./js/map.js",
  "./pic2.png",
- "./style.css",
 ];
 
 
