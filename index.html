@@ -12,6 +12,10 @@
        <link href="https://unpkg.com/material-components-web@1.0.0/dist/material-components-web.min.css" rel="stylesheet" type="text/css" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       
+      <!-- Include Dexie -->
+      <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+
+      
       
     <!-- stylesheet from bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -178,7 +182,48 @@ input[type=submit]:hover {
       <p class="header-par" align=center><b style="color: red;">App name is StayHealthy. You can find it on GitHub</b><a href="https://github.com/weesooo/StayHealthy">WEESOOO</a></p>
       <p class="header-par" align=center><b style="color: red;">This developer -Wisam Al Ali- is a senior graduating in Spring 2019 from the Univeristy of Illinois at Chicago</b></p>
     </section>
+    
+        
+<div id="list1">
+       </div>
       
+      
+      
+<script>
+          //
+          // Define your database
+          //
+          var db = new Dexie("clinic_database");
+          db.version(1).stores({
+              clinics: 'name, Address'
+          });
+
+          //
+          // Put some data into it
+          //
+          db.clinics.put({name: "Lakeview STI Specialty Clinic", Address: "2861 N. Clark"});
+          db.clinics.put({name: "Uptown NHC", Address: "845 W. Wilson Ave."});
+          db.clinics.put({name: "Austin STI Specialty Clinic", Address: "4909 W. Division St"});
+          db.clinics.put({name: "WIC Main Office", Address: "333 S. State S"});
+          db.clinics.put({name: "Lawndale MHC", Address: "1201 S. Campbell St"});
+          db.clinics.put({name: "Alivio Medical Center - Morgan", Address: "966 W. 21st St"});
+          db.clinics.put({name: "Westside Health Partnership", Address: "2400 S. Kedzie Ave"});
+
+
+
+
+
+          
+          
+          
+          
+          
+          db.clinics.each(function(clinic){
+            console.log(clinic.name);
+            document.getElementById("list1").innerHTML += "<p>" + clinic.name + "<br>" + clinic.Address + "</p>";
+          });
+      </script>         
+        
   
       
 
@@ -190,6 +235,13 @@ input[type=submit]:hover {
   </script>
     
 
+      
+     
+      
+      
+      
+      
+      
 <script>
     $(document).ready(function() {
 
